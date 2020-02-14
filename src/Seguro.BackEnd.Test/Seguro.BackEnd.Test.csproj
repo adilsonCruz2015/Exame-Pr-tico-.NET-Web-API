@@ -45,18 +45,26 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleInjector, Version=4.9.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.4.9.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DI\InjecaoDeDependencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeguroTeste.cs" />
     <Compile Include="VeiculoTeste.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Seguro.BackEnd.Idc\Seguro.BackEnd.Idc.csproj">
+      <Project>{31033a54-2743-418b-bd88-6b826e1042f6}</Project>
+      <Name>Seguro.BackEnd.Idc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Seguro.BackEnd\Seguro.BackEnd.csproj">
       <Project>{62773a46-b3e1-466d-a619-cb4e7abca362}</Project>
       <Name>Seguro.BackEnd</Name>

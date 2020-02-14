@@ -1,19 +1,28 @@
 ﻿
+using System;
+
 namespace Seguro.BackEnd.Dominio.Entidade
 {
     public class Veiculo
     {
-        public Veiculo(double valorVeiculo,
+        protected Veiculo()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public Veiculo(decimal valorVeiculo,
                        string marca,
                        string modelo
-            )
+            ) : this()
         {
             ValorVeiculo = valorVeiculo;
             Marca = marca;
             Modelo = modelo;
         }        
         
-        public double ValorVeiculo { get; private set; }        
+        public Guid Id { get; private set; }
+
+        public decimal ValorVeiculo { get; private set; }        
 
         public string Marca { get; private set; }
 

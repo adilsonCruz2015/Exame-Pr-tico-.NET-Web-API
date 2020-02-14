@@ -1,19 +1,32 @@
 ﻿
+using System;
+
 namespace Seguro.BackEnd.Dominio.Entidade
 {
     public class Segurado
     {
-        public Segurado(string nome, string cpf, int idade)
+        protected Segurado()
         {
+            Id = Guid.NewGuid();
+        }
+
+        public Segurado(string nome, 
+                        string cpf, 
+                        int idade)
+            : this()
+        {            
             Nome = nome;
             Cpf = cpf;
             Idade = idade;
+
         }
 
-        public string Nome { get; set; }
+        public Guid Id { get; private set; }
 
-        public string Cpf { get; set; }
+        public string Nome { get; private set; }
 
-        public int Idade { get; set; }        
+        public string Cpf { get; private set; }
+
+        public int Idade { get; private set; }        
     }
 }

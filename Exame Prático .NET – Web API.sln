@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguro.BackEnd", "src\Segur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguro.BackEnd.Test", "src\Seguro.BackEnd.Test\Seguro.BackEnd.Test.csproj", "{1D6586C7-7E85-4E6B-9F2F-8D86516EE99A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguro.BackEnd.Idc", "src\Seguro.BackEnd.Idc\Seguro.BackEnd.Idc.csproj", "{31033A54-2743-418B-BD88-6B826E1042F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1D6586C7-7E85-4E6B-9F2F-8D86516EE99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6586C7-7E85-4E6B-9F2F-8D86516EE99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6586C7-7E85-4E6B-9F2F-8D86516EE99A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31033A54-2743-418B-BD88-6B826E1042F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31033A54-2743-418B-BD88-6B826E1042F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31033A54-2743-418B-BD88-6B826E1042F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31033A54-2743-418B-BD88-6B826E1042F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{E58791E9-9E7C-4962-82CB-3DF9176516D6} = {329D7B1C-F073-47B9-9B83-59E2BEDE0194}
 		{62773A46-B3E1-466D-A619-CB4E7ABCA362} = {3C3A8FDD-C623-4F6A-B83A-4DF7CF5FF745}
 		{1D6586C7-7E85-4E6B-9F2F-8D86516EE99A} = {329C8EF6-1071-4D06-81EF-C84A23220900}
+		{31033A54-2743-418B-BD88-6B826E1042F6} = {3C3A8FDD-C623-4F6A-B83A-4DF7CF5FF745}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC4F75DA-02D6-4AB1-8B4E-4774D476F19B}

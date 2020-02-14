@@ -1,38 +1,50 @@
 ﻿using Seguro.BackEnd.Dominio.Entidade;
-
+using System;
 
 namespace Seguro.BackEnd.Dominio.ObjetoDeValor
 {
     public class Seguro
     {
-        private const double MARGEM_SEGURANCA = 0.03;
+        private const decimal MARGEM_SEGURANCA = 3;
 
-        private const double LUCRO = 0.05;
+        private const decimal LUCRO = 5;
 
-        public Seguro(Veiculo veiculo, Segurado segurado)
+        protected Seguro()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public Seguro(Veiculo veiculo, 
+                      Segurado segurado)
+            : this()
         {
             Veiculo = veiculo;
             Segurado = segurado;
         }
 
+        public Seguro(Veiculo veiculo)
+            :this(veiculo, null) {  }
+
+        public Guid Id { get; private set; }
+
         public Veiculo Veiculo { get; private set; }
 
         public Segurado Segurado { get; private set; }
 
-        public double TaxaDeRisco { get; private set; }
+        public decimal TaxaDeRisco { get; private set; }
 
-        public double PremioDeRisco { get; private set; }
+        public decimal PremioDeRisco { get; private set; }
 
-        public double PremidoPuro { get; private set; }
+        public decimal PremidoPuro { get; private set; }
 
-        public double PremioComercial { get; private set; }
+        public decimal PremioComercial { get; private set; }
 
-        public double CalcularSeguro()
+        public decimal CalcularSeguro()
         {
             TaxaDeRisco = (Veiculo.ValorVeiculo * 5) / (2 / Veiculo.ValorVeiculo) / 100;
             PremioDeRisco = TaxaDeRisco * Veiculo.ValorVeiculo;
-            PremidoPuro = PremioDeRisco * (1 + MARGEM_SEGURANCA);
-            PremioComercial = (LUCRO * PremidoPuro) + PremidoPuro;
+            PremidoPuro = PremioDeRisco * (1 + (MARGEM_SEGURANCA / 100));
+            PremioComercial = ((LUCRO / 100) * PremidoPuro) + PremidoPuro;
 
             return PremioComercial;
         }

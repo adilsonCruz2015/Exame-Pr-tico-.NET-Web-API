@@ -12,12 +12,12 @@ namespace Seguro.BackEnd.Api
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "{controller}/{id}",
+                routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
 
             // Permite exibir as mensagens de erro internas do servidor
-            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+            //config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;           
         }
     }
 }
